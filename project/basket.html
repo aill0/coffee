@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>سلة المشتريات</title>
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHomepage.css" type="text/css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
+        <style>
+            .row{  
+                content: "";
+                clear: both;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 60%;
+                border: 0.078125vw solid #ddd;
+                margin: 0.78125vw;
+                margin-right: 1.5625vw;
+                font-family: "Tajawal", sans-serif;
+            }
+            th, td {
+                text-align: center;
+                padding: 1.25vw;    
+            }
+            th:first-child, td:first-child {
+                text-align: center;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2
+            }
+            .dipayment{
+                border: 0.078125vw;
+                font-family: "Tajawal", sans-serif;
+                color: black;
+                width: 20%;  
+                float: center;
+                margin: 0.78125vw;
+            }
+            li {
+                direction: rtl;
+            }
+            button{
+                color: white;
+                padding: 1.5625vw;
+                padding-left: 4.6875vw;
+                padding-right: 4.6875vw;
+                margin:0.78125vw;
+                margin-left:60%;
+                position:absolute;
+                float:right;
+                background:#6CACCF; 
+                font-family: "Tajawal", sans-serif;
+            }
+            #snackbar {
+                visibility: hidden;
+                min-width: 19.53125vw;
+                margin-left: -9.765625vw;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 0.15625vw;
+                padding: 1.25vw;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                bottom: 2.34375vw;
+                font-size: 1.328125vw;
+                font-family: "Tajawal", sans-serif;
+            }
+            #snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+            @-webkit-keyframes fadein {
+                from {bottom: 0; opacity: 0;} 
+                to {bottom: 2.34375vw; opacity: 1;}
+            }
+            @keyframes fadein {
+                from {bottom: 0; opacity: 0;}
+                to {bottom: 2.34375vw; opacity: 1;}
+            }
+            @-webkit-keyframes fadeout {
+                from {bottom: 2.34375vw; opacity: 1;} 
+                to {bottom: 0; opacity: 0;}
+            }
+            @keyframes fadeout {
+                from {bottom: 2.34375vw; opacity: 1;}
+                to {bottom: 0; opacity: 0;}
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding:4px; float: left;">
+                <ul style="text-align-last:right;">
+                    <li class="w3-bar-item w3-border-left"><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="cafe.html">محلات القهوة</a>
+                        <ul>
+                            <li><a href="projectstar.html">starbucks</a></li>
+                            <li><a href="projectdoes.html">dose</a></li>
+                            <li><a href="projectcosta.html">costa</a></li>
+                            <li><a href="barnproject.html">barn's</a></li>
+                            <li><a href="projectdunkkin.html">dunkin</a></li>
+                        </ul>
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html">المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="aboutUs.html">من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"class="active"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:20px;color:black'></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <br><br>
+        
+        <div class="row">
+            <table align="right">
+                <tr>
+                    <th>السعر </th>
+                    <th>الكمية</th>
+                    <th>الطلب</th>    
+                </tr>
+                <tr>
+                    <td> 15</td>
+                    <td>1</td>
+                    <td>Spanch latte</td>
+                </tr>
+                <tr>
+                    <td> 18</td>
+                    <td>2</td>
+                    <td>Macchiato</td>
+                </tr>
+                <tr>
+                    <td> 14</td>
+                    <td>1</td>
+                    <td>Americano</td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td> </td>
+                    <td>المجموع</td>
+                </tr>
+            </table>
+            <div style="margin-left: 5%;">
+                <textarea id="subject" name="subject" placeholder="اكتب عنوانك من فضلك" style="height:23.4375vw; width:23.4375vw; margin:1.171875vw; margin-left:1.953125vw; padding-left:2.34375vw; padding-right:2.34375vw;"></textarea>
+            </div>
+        </div>
+        
+        <button onclick="myFunction()">تأكيد الطلب</button>
+        
+        <div class="dipayment" align="center" style="margin-left: 8%;">
+            <p>طريقة الدفع</p>
+            <input style="text-align: right;" type="radio" name="buy" value="عند الاستلام" > 
+            عند الاستلام
+            <br>
+            <input style="text-align: right;" type="radio" name="buy" value="بطاقة" > 
+            بطاقة
+            <br>
+            <a href="card.html"><input  style="text-align: center; background:black;color: white; text-decoration: none;" name="دفع" value="إكمال الدفع" > </a>
+        </div>
+        <!--زر التاكيد -->
+        <div id="snackbar">تم تأكيد طلبك، تمتع بقهوتك</div>
+        
+        <br><br> <br><br> 
+        <footer dir="ltr" style="position: fixed;">
+            <ul style="text-align-last:right;">
+                    <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                    <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                <li><a><i class='far fa-envelope' style='font-size:1.5625vw;color:black'></i> coffeeD@gmail.com</a></li>
+                <li><a><i class='fas fa-phone-alt' style='font-size:1.5625vw;color:black'></i> +966500112234</a></li>
+            </ul>
+        </footer>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+        </script>
+    </body>
+</html> 

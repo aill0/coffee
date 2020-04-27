@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html len="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>المحلات</title>
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHomepage.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .container {
+                position:sticky;
+                width: 50%;
+                max-width: 23.4375vw;
+                border: 0.78125vw;
+                border-color: gainsboro;
+            }
+            .image {
+                display: block;
+                width: 19.53125vw;
+                height: 19.53125vw;
+                
+            }
+            .overlay {
+                position: absolute; 
+                bottom: 0; 
+                background: rgb(0, 0, 0);
+                background: rgba(0, 0, 0, 0.5); /* Black see-through */
+                color: #f1f1f1; 
+                width: 19.53125vw;
+                transition: .5s ease;
+                opacity:0;
+                color: white;
+                font-size: 1.5625vw;
+                padding: 1.5625vw;
+                text-align: center;
+            }
+            .container:hover .overlay {
+                opacity: 1;
+                font-family: "Tajawal", sans-serif;
+            }
+            .column {
+                float: right;
+                width: 33.33%;
+                padding: 0.390625vw;
+            }
+            /* Clearfix (clear floats) */
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+        </style>
+    </head>
+    <body style="height: 60vw;">
+         <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding:0.3125vw; float: left;">
+                <ul style="text-align-last:right;">
+                    <li class="w3-bar-item w3-border-left"><a  href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="cafe.html" class="active">محلات القهوة</a> 
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html" >المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="aboutUs.html" >من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:1.5625vw;color:black'></i></a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="row" style="margin-left: 1vw; margin-right: 8vw; margin-top: 2vw;">
+            <div class="column">
+                <div class="container">
+                    <a href="projectstar.html"><img src="photo/starbucks-logo-900.jpg" alt="starbucks-logo" class="image"></a>
+                    <div class="overlay">قائمة starbucks</div>
+                </div>
+            </div>
+            <div class="column">
+                 <div class="container">
+                     <a href="projectdoes.html"><img src="photo/Logo-Dose%20Cafe.jpg" alt="does-logo" class="image"></a>
+                    <div class="overlay">قائمة dose</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="container">
+                    <a href="projectcosta.html"><img src="photo/costa.png" alt="costa-logo" class="image"></a>
+                    <div class="overlay">قائمة costa coffee</div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 1vw; margin-right: 26vw">
+            <div class="column">
+                <div class="container">
+                    <a href="barnproject.html"><img src="photo/Barnscafe.jpg" alt="barn-logo" class="image"></a>
+                    <div class="overlay">قائمة barn's</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="container">
+                    <a href="projectdunkkin.html"><img src="photo/dunkkin.png" alt="dunkkin-logo" class="image"></a>
+                    <div class="overlay">قائمة dunkin donuts</div>
+                </div>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">للأعلى</button>
+        
+        <footer dir="ltr" style="position: fixed;">
+                <ul style="text-align-last:right;">
+                    <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                    <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='far fa-envelope' style='font-size:1.5625vw;color:black'></i> coffeeD@gmail.com</a></li>
+                    <li><a><i class='fas fa-phone-alt' style='font-size:1.5625vw;color:black'></i> +966500112234</a></li>
+                </ul>
+            </footer>
+        
+        <script>
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+        
+    </body>
+</html>

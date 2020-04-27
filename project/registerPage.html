@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>تسجيل مستخدم جديد</title>
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <link rel="stylesheet" href="css/signStyle.css" type="text/css">
+        <link rel="stylesheet" href="css/stylereg.css" type="text/css">  
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+        <style>
+            button{
+                color: white;
+                padding: 1.5625vw;
+                padding-left: 3.125vw;
+                padding-right: 3.125vw;
+                position: 30%;
+                margin-bottom: 2.34375vw;
+                margin-left: 27%;
+                position:left;
+                float:left;
+                background-color:steelblue;
+                border-radius:  0.9375vw; 
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main" style="font-family:'Tajawal', sans-serif">
+            <section class="signup">
+                <div class="container">
+                    <div class="signup-content">
+                        <div class="signup-form">
+                            <h2 class="form-title" style="text-align-last: center;">تسجيل مستخدم جديد</h2>
+                            <form  name="myform" method="POST" class="register-form" id="register-form" onsubmit="return validateform()">
+                                <div class="form-group">
+                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i><i  class='fas fa-user'></i></label>
+                                    <input type="text" name="name" id="name" placeholder="إسمك"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i> <i class='fas fa-at'></i></label>
+                                    <input type="email" name="email" id="email" placeholder="الإيميل" required/> 
+                                </div>
+                               
+                                <div class="form-group">
+                                    <label for="call"><i class="zmdi zmdi-lock-outline"></i> <i class='fas fa-phone-alt'></i></label>
+                                    <input type="number" name="call" id="phone" placeholder="رقم الجوال" required/>
+                                   
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass"><i class="zmdi zmdi-lock"></i> <i class='fas fa-lock'></i></label>
+                                    <input type="password" name="password" id="pass" placeholder="كلمة المرور"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i><i class='fas fa-lock'  style="text-align-last:right;"></i></label>
+                                    <input type="password" name="password2" id="re_pass" placeholder="تأكيد كلمة المرور"/>
+                                </div>
+                                <br>
+                                <div class="form-group form-button">
+                                   <button onclick="validateform()"><a id="sign" href="index.html" style="text-decoration: none; font-family:'Tajawal', sans-serif; background-color:steelblue; color: white;">تسجيل </a></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="signup-image" style=" margin-right: 2vw;">
+                             <figure><img style="border-radius:7.8125vw; position:7.8125vw; margin-top: 0; width:23.4375vw ;
+                                    height:23.4375vw;" src="photo/image7.jpg" alt="sing up image"></figure>
+                            <a href="signinPage.html" class="signup-image-link">لدي حساب بالفعل</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>  
+            function validateform(){  
+                var name=document.myform.name.value;  
+                var password=document.myform.password.value; 
+                var firstpassword=document.myform.password.value;
+                var secondpassword=document.myform.password2.value;
+                if (name==null || name==""){  
+                    alert("يجب تعبئة الاسم");  
+                    return false;  
+                }else if(password.length<6){  
+                    alert("كلمة المرور ينبغي ان تكون على الاقل ستة خانات ");  
+                    return false;  
+                }else if(firstpassword!=secondpassword){
+                    alert("يجب تطابق كلمة المرور");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }  
+        </script>  
+    </body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>من نحن؟</title>
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHomepage.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>   
+        <style>
+        
+            .px{
+                color:#FF9F55;
+                  font-size: 2.4vw;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                background-color: white;
+                font-family: Helvetica, sans-serif;
+                height: 70vw;
+            }
+            /* The actual timeline (the vertical ruler) */
+            .timeline {
+                position: relative;
+                max-width: 93.7vw;
+                margin: 0 auto;
+            }
+            /* The actual timeline (the vertical ruler) */
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 0.46vw;
+                background-color: #E4E5E8;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -0.23vw;
+            }
+            /* Container around content */
+            .container {
+                padding: 10px 40px;
+                position: relative;
+                background-color: inherit;
+                width: 50%;
+            }
+            /* The circles on the timeline */
+            .container::after {
+                content: '';
+                position: absolute;
+                width: 1.95vw;
+                height: 1.95vw;
+                right: -1.3vw;
+                background-color: white;
+                border: 4px solid #FF9F55;
+                top: 1.17vw;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            /* Place the container to the left */
+            .left {
+                left: 0;
+            }
+            /* Place the container to the right */
+            .right {
+                left: 50%;
+            }
+            /* Add arrows to the left container (pointing right) */
+            .left::before {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 1.7vw;
+                width: 0;
+                z-index: 1;
+                right: 2.43vw;
+                border: medium solid white;
+                border-width: 0.78vw 0 0.78vw 0.78vw;
+                border-color: transparent transparent transparent #E4E5E8;
+            }
+            /* Add arrows to the right container (pointing left) */
+            .right::before {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 1.7vw;
+                width: 0;
+                z-index: 1;
+                left: 2.34vw;
+                border: medium solid #E4E5E8;
+                border-width: 0.78vw 0.78vw 0.78vw 0;
+                border-color: transparent #E4E5E8 transparent transparent;
+            }
+            /* Fix the circle for containers on the right side */
+            .right::after {
+                left: -1.25vw;
+            }
+            /* The actual content */
+            .content {
+                padding: 1.56vw 2.34vw;
+                background-color: #E4E5E8;
+                position: relative;
+                border-radius: 0.46vw;
+            }
+            /* Media queries - Responsive timeline on screens less than 600px wide */
+            @media screen and (max-width: 46.87vw) {
+                /* Place the timelime to the left */
+                .timeline::after {
+                    left: 2.42vw;
+                }
+                /* Full-width containers */
+                .container {
+                    width: 100%;
+                    padding-left: 5.46vw;
+                    padding-right: 1.95vw;
+                }
+                /* Make sure that all arrows are pointing leftwards */
+                .container::before {
+                    left: 4.68vw;
+                    border: medium solid white;
+                    border-width: 0.78vw 0.78vw 0.78vw 0;
+                    border-color: transparent white transparent transparent;
+                }
+                /* Make sure all circles are at the same spot */
+                .left::after, .right::after {
+                    left: 1.17vw;
+                }
+                /* Make all right containers behave like the left ones */
+                .right {
+                    left: 0%;
+                }
+            }
+            p,pre{
+                font-family: "Tajawal", sans-serif;            
+            }
+            li {
+                direction: rtl;
+            }
+        </style>
+    </head>
+    <body>
+       <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding:0.31vw; float: left;">
+                <ul style="text-align-last:right;">
+                    <li class="w3-bar-item w3-border-left"><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="cafe.html">محلات القهوة</a>
+                        <ul>
+                            <li><a href="projectstar.html">starbucks</a></li>
+                            <li><a href="projectdoes.html">dose</a></li>
+                            <li><a href="projectcosta.html">costa</a></li>
+                            <li><a href="barnproject.html">barn's</a></li>
+                            <li><a href="projectdunkkin.html">dunkin</a></li>
+                        </ul>
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html">المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a class="active" href="aboutUs.html">من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:1.5625vw;color:black'></i></a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        
+       <br>
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                     <p align="center" class="px">من نحن</p>
+                    <p align="center">أهلاً بكم في رشفة حُرّة</p>   
+                    <p>هنا موقع لمحبي القهوة مكان مناسب لتدليل النفس وتعديل المزاج دون مشقة الخروج فنجان قهوتك المفضلة ونكهتك التي تحب جميعها لدينا </p>
+                    <p align="center">فخدماتنا تسعى إلى راحتك لا تتردد ! اطلب الآن واحظى بوقت ممتع  </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <p align="center" class="px">منبع إلهامنا للمشروع</p>  
+                    <p align="center">أتت فكرته بعد التأمل في شكل الوضع الحالي وتصدّر القهوة كصنف أساسي في حياة البعض
+                        ويومه، فكّرنا بطريقة للحصول على القهوة برفاهية دون إقتطاع جزء من الوقت
+                        في سبيل الحصول عليها </p>
+                    <p align="center"> 
+                         حاولنا أن تكون فكرتنا تقدم الإيجاز في المشقة والتسهيلات ليقضي الشخص     
+                         لحظته جامعاً بين اختصار الوقت والإسترخاء </p> 
+                </div>  
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <p align="center" class="px">رؤيتنا</p>   
+                    <p align="center"> موقع إلكتروني يقوم بتوصيل القهوة التي تحب إلى حيث ما أردت وفي وقت قياسي
+                        نخدمكم في الحصول على وقت هانئ، فالكثير من أماكن القهوة لدينا 
+                        فقط اضغط وطلبك بوقت قصير يوصل .. لا داعي للإنتظار بعد الآن
+                        نحن هنا من أجلك</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <p align="center" class="px">نبذة عن منفذي المشروع</p>
+                    <p align="center">تم تأسيس الموقع من قِبل طالبات نظم المعلومات لمادة تقنيات الإنترنت لكم يا عملائنا الِكرام
+                        آملين أن نحوز على رضاكم مع تحيّاتنا الخالصة وأمنياتنا لكم بمزاج منعش هادئ
+                        وإذا تعكّر صفوك.. نحنُ هنا</p>
+                </div> 
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top" style="margin-bottom:0vw;">للأعلى</button>
+        
+        <footer dir="ltr" style="position: fixed;">
+                <ul style="text-align-last:right;">
+                    <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                    <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='far fa-envelope' style='font-size:1.56vw;color:black'></i> coffeeD@gmail.com</a></li>
+                    <li><a><i class='fas fa-phone-alt' style='font-size:1.56vw;color:black'></i> +966500112234</a></li>
+                </ul>
+            </footer>
+
+        <script>
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            var mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+    </html>

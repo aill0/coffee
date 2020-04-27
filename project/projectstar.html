@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html len="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>ستاربكس</title>
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHomepage.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+         <style>
+            body{
+                height: 70vw;
+            }
+            h5,h3{
+                color:rosybrown; font-family: "Tajawal", sans-serif;
+            }
+            h6{
+                color:saddlebrown; font-family: "Tajawal", sans-serif;
+            }
+            div.gallery {
+                margin: 5vw;
+                border:  0.078125vw solid #ccc;
+                float: left;
+                width:70%;
+            }
+
+            div.gallery:hover {
+                border:  0.078125vw solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 95%;
+                float: right;
+                border:  0.078125vw solid #4F514F;
+                margin: 0.78125vw;
+                font-family: "Tajawal", sans-serif;
+                margin-top: 2vw;
+            }
+
+            th, td {
+                text-align: center;
+                padding: 1.25vw;
+                
+            }
+
+            th:first-child, td:first-child {
+                text-align: right;
+            }
+            th{
+                background-color: #858985;
+                color: white;
+            }
+
+            tr:nth-child(even) {
+                background-color: #F2F2F2;
+            }
+            td:first-child,th:first-child{
+              border-left: 1px solid #6B6E6A;
+            }
+            #snackbar {
+                visibility: hidden;
+                min-width: 19.53125vw;
+                margin-left: -9.765625vw;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 0.15625vw;
+                padding: 1.25vw;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                bottom: 2.34375vw;
+                font-size: 1.328125vw;
+                font-family: "Tajawal", sans-serif;
+            }
+            #snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+            @-webkit-keyframes fadein {
+                from {bottom: 0; opacity: 0;} 
+                to {bottom: 2.34375vw; opacity: 1;}
+            }
+            @keyframes fadein {
+                from {bottom: 0; opacity: 0;}
+                to {bottom: 2.34375vw; opacity: 1;}
+            }
+            @-webkit-keyframes fadeout {
+                from {bottom: 2.34375vw; opacity: 1;} 
+                to {bottom: 0; opacity: 0;}
+            }
+            @keyframes fadeout {
+                from {bottom: 2.34375vw; opacity: 1;}
+                to {bottom: 0; opacity: 0;}
+            }
+            .column {
+                float: right;
+                width: 33.33%;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+                float: left;
+            }
+             div.desc {
+                padding: 0.234375vw;
+                text-align:center;
+                font-size:small;
+                font-family: "Tajawal", sans-serif;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding:0.3125vw; float: left;">
+                <ul style="text-align-last:right;">
+                    <li class="w3-bar-item w3-border-left"><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left"><a class="active" href="cafe.html">محلات القهوة</a>
+                        <ul>
+                            <li><a href="projectstar.html">starbucks</a></li>
+                            <li><a href="projectdoes.html">dose</a></li>
+                            <li><a href="projectcosta.html">costa</a></li>
+                            <li><a href="barnproject.html">barn's</a></li>
+                            <li><a href="projectdunkkin.html">dunkin</a></li>
+                        </ul>
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html">المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="aboutUs.html">من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:1.5625vw;color:black'></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- menu -->
+        <div class="row">
+            <div class="column">
+                <table>
+                    <tr>
+                        <th style="width:30%">المشروبات الباردة</th>
+                        <th>صغير</th>
+                        <th>وسط</th>
+                        <th>كبير</th>
+                    </tr>
+                    <tr>
+                        <td><lable>Spanch latte</lable></td>
+                        <td><input type="checkbox" name="cold1" value="small" > 15 ريال</td>
+                        <td><input type="checkbox" name="cold1" value="medium" > 21 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Iced coffee amricano</lable></td>
+                        <td><input type="checkbox" name="cold2" value="small" > 14 ريال</td>
+                        <td><input type="checkbox" name="cold2" value="medium" > 22 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Cold Brew</lable></td>
+                        <td><input type="checkbox" name="cold3" value="small" > 13 ريال</td>
+                        <td><input type="checkbox" name="cold3" value="medium" > 24 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Iced Espresso Shot</lable></td>
+                        <td><input type="checkbox" name="cold4" value="small" > 16 ريال</td>
+                        <td><input type="checkbox" name="cold4" value="medium" > 23 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Iced Flat White</lable></td>
+                        <td><input type="checkbox" name="cold5" value="small" > 13 ريال</td>
+                        <td><input type="checkbox" name="cold5" value="medium" > 25 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Iced Macchiato</lable></td>
+                        <td><input type="checkbox" name="cold6" value="small" > 15 ريال</td>
+                        <td><input type="checkbox" name="cold6" value="medium" > 21 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Iced Mocha</lable></td>
+                        <td><input type="checkbox" name="cold7" value="small" > 13 ريال</td>
+                        <td><input type="checkbox" name="cold7" value="medium" > 25 ريال</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column">
+                <table>
+                    <tr>
+                        <th style="width:30%">المشروبات الساخنة</th>
+                        <th>صغير</th>
+                        <th>وسط</th>
+                        <th>كبير</th>
+                    </tr>
+                   <tr>
+                        <td><lable>Hot Chocolate</lable></td>
+                        <td><input type="checkbox" name="hot1" value="small" > 15 ريال</td>
+                        <td><input type="checkbox" name="hot1" value="medium" > 20 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Americano</lable></td>
+                        <td><input type="checkbox" name="hot2" value="small" > 14 ريال</td>
+                        <td><input type="checkbox" name="hot2" value="medium" > 22 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Cappuccino</lable></td>
+                        <td><input type="checkbox" name="hot3" value="small" > 13 ريال</td>
+                        <td><input type="checkbox" name="hot3" value="medium" > 24 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Espresso</lable></td>
+                        <td><input type="checkbox" name="hot4" value="small" > 16 ريال</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Flat White</lable></td>
+                        <td><input type="checkbox" name="hot5" value="small" > 13 ريال</td>
+                        <td><input type="checkbox" name="hot5" value="medium" > 25 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Macchiato</lable></td>
+                        <td><input type="checkbox" name="hot6" value="small" > 15 ريال</td>
+                        <td><input type="checkbox" name="hot6" value="medium" > 21 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><lable>Mocha</lable></td>
+                        <td><input type="checkbox" name="hot7" value="small" > 13 ريال</td>
+                        <td><input type="checkbox" name="hot7" value="medium" > 25 ريال</td>
+                        <td>-</td>
+                    </tr>
+                    <td><br></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </table>
+            </div>
+            <div class="column">
+                <div class="gallery">
+                        <img src="photo/starbucks-logo-900.jpg" alt="starbucks logo">
+                        <div class="desc">STARBUCKS COFFEE</div>
+                </div> 
+                 <!--زر الاضافة -->
+                <button onclick="myFunction()" style="padding:1vw 1.5vw; margin-top: 0vw; margin-left:10.5vw; text-align:center; font-family:'Tajawal', sans-serif; ">إضافة إلى السلة</button>
+                <div id="snackbar">تم إضافة طلبك للسلة</div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="column" style="width: 66.66%;margin-top: -2vw;">
+                <table>
+                    <tr>
+                        <th style="width:30%">المخبوزات</th>
+                        <th>السعر</th>
+                    </tr>
+                    <tr>
+                        <td><lable>plain Bagel</lable></td>
+                        <td><input type="checkbox" name="Bagel1" value="Bagel1" > 30 ريال</td>
+                    </tr>
+                    <tr>
+                        <td><lable>blueberry Bagel</lable></td>
+                        <td><input type="checkbox" name="Bagel2" value="Bagel2" > 25 ريال</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">للأعلى</button>
+        
+        <footer dir="ltr" style="position: fixed;">
+            <ul style="text-align-last:right;">
+                <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                <li><a><i class='far fa-envelope' style='font-size:1.5625vw;color:black'></i> coffeeD@gmail.com</a></li>
+                <li><a><i class='fas fa-phone-alt' style='font-size:1.5625vw;color:black'></i> +966500112234</a></li>
+            </ul>
+        </footer>
+        <script>
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            var mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            function myFunction() {
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+        </script>
+            </body>
+</html>    

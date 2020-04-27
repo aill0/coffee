@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>المندوبين</title>
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHomepage.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                height: 60vw;
+            }
+            .container {
+                position: relative;
+                width: 45%;
+                max-width: 45%;
+            }
+            p{
+                font-family: "Tajawal", sans-serif;
+                color:saddlebrown;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .3s ease;
+                background-color: red;
+            }   
+            .overlay2 {
+                position: absolute; 
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .3s ease;
+                background-color:limegreen;
+            }
+            .container:hover .overlay {
+                opacity: 1;
+            }
+            .container:hover .overlay2 {
+                opacity: 1;
+            }
+            .icon {
+                color: white;
+                font-size: 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .fa-user:hover {
+                color: #eee;
+            }
+            .fa {
+                font-size: 2.34375vw;
+                cursor: pointer;
+                user-select: none;
+            }
+            .fa:hover {
+                color: darkblue;
+            }
+            .column {
+                float: right;
+                width: 33.33%;
+                padding: 0.390625vw;
+            }
+            /* Clearfix (clear floats) */
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }  
+            .fa-star{
+                color:black;
+            }
+            .checked {
+                color: orange;
+            }
+            li {
+                direction: rtl;
+            }
+        </style>
+    </head>
+    <body>
+       <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding: 0.3125vw; float: left;">
+                <ul style="text-align-last:right;">
+                    <li class="w3-bar-item w3-border-left"><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left" ><a href="cafe.html">محلات القهوة</a>
+                        <ul>
+                            <li><a href="projectstar.html">starbucks</a></li>
+                            <li><a href="projectdoes.html">dose</a></li>
+                            <li><a href="projectcosta.html">costa</a></li>
+                            <li><a href="barnproject.html">barn's</a></li>
+                            <li><a href="projectdunkkin.html">dunkin</a></li>
+                        </ul>
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html" class="active" >المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="aboutUs.html">من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:1.5625vw;color:black'></i></a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <br><br>
+        
+        <div class="row" style="margin-left:14vw;">
+            <div class="column">
+                <div class="container">
+                    <img src="photo/avatar2.png" alt="Avatar" class="image">
+                    <div class="overlay">
+                        <a href="#" class="icon" title="User Profile">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                </div>  
+                 <!--المندوب في حالة طلب -->
+                <p style=color:rosybrown;background;>محمد</p>
+                <p> قيّمني من فضلك</p>
+                <p><span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star" style='font-size:1.5625vw;'></span>  4.7</p>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+            </div>
+            <div class="column">
+                <div class="container">
+                    <img src="photo/img_avatar.png" alt="Avatar" class="image">
+                    <div class="overlay2">
+                        <a href="#" class="icon" title="User Profile">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                </div> 
+                <p style=color:rosybrown;background;>عبدالرحمن</p>
+                <p> قيّمني من فضلك</p>
+                <p><span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>  5.0</p>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+            </div>
+            <div class="column">
+                <div class="container">
+                    <img src="photo/avatar2.png" alt="Avatar" class="image">
+                    <div class="overlay2">
+                        <a href="#" class="icon" title="User Profile">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                </div> 
+                <p style=color:rosybrown;background;>عمر</p>
+                <p> قيّمني من فضلك</p>
+                <p><span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star" style='font-size:1.5625vw;'></span>  3.6</p>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+            </div>
+        </div>    
+        <div class="row"  style="margin-left: 14vw;">
+            <div class="column">
+                <div class="container">
+                    <img src="photo/img_avatar.png" alt="Avatar" class="image" >
+                    <div class="overlay2">
+                        <a href="#" class="icon" title="User Profile">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                    </div> 
+                
+                <p style=color:rosybrown;>عبدالله</p>
+                <p> قيّمني من فضلك</p>
+                <p><span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>  5.0</p>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+            </div>
+            <div class="column">
+                <div class="container">
+                    <img src="photo/avatar2.png" alt="Avatar" class="image" >
+                    <div class="overlay2">
+                        <a href="#" class="icon" title="User Profile">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                </div> 
+                <p style=color:rosybrown;background;>انس</p>
+                <p> قيّمني من فضلك</p>
+                <p><span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star" style='font-size:1.5625vw;'></span>  4.7</p>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+            </div>
+            <div class="column">
+                <div class="container">
+                    <img src="photo/img_avatar.png" alt="Avatar" class="image" >
+                    <div class="overlay">
+                        <a href="#" class="icon" title="User Profile">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                </div> 
+                <!--المندوب في حالة طلب -->
+                <p style=color:rosybrown;background;>فهد</p>
+                <p> قيّمني من فضلك</p> 
+                <p><span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star checked" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star" style='font-size:1.5625vw;'></span>
+                    <span class="fa fa-star" style='font-size:1.5625vw;'></span>  3.2</p>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i> 
+            </div>
+        </div>
+        
+        <footer dir="ltr" style="position: fixed;">
+                <ul style="text-align-last:right;">
+                    <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                    <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='far fa-envelope' style='font-size:1.5625vw;color:black'></i> coffeeD@gmail.com</a></li>
+                    <li><a><i class='fas fa-phone-alt' style='font-size:1.5625vw;color:black'></i> +966500112234</a></li>
+                </ul>
+            </footer>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("fa-thumbs-down");
+            }
+        </script>
+
+</body>
+</html>

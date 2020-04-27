@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html len="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>الصفحة الرئيسية</title>
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHomepage.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHome.css" type="text/css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <!-- css styles -->
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;
+                height: 75vw;
+            }
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+            
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 70%;
+                position: sticky;
+                margin: auto;
+                margin-top: 3vw;
+            }
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 1.2vw;
+                width: 1.2vw;
+                margin: 0 0.16vw;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active1 {
+                background-color: #717171;
+            }
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 23.4375vw) {
+                .text {font-size: 0.859375vw}
+            }
+            .container1 {
+                border: 0.16vw solid #B9D5EE;
+                background-color: #F4F7FD;
+                border-radius: 0.4vw;
+                padding: 0.8vw;
+                margin: 0.5vw 1vw;
+                font-family: "Tajawal", sans-serif;
+            }
+            .darker {
+                border-color: #A0BBED;
+                background-color: #EBF1FB;
+                font-family: "Tajawal", sans-serif;
+            }
+            .container1::after {
+                content: "";
+                clear: both;
+                display: table;
+            }   
+            .container1 img {
+                max-width: 4.7vw;
+                width: 100%;
+                margin-right: 1,5vw;
+                border-radius: 50%;
+            }
+            .container1 img.right {
+                float: right;
+                margin-left: 1.5625vw;....
+                margin-right:0;
+                font-family: "Tajawal", sans-serif;
+            }
+            #comin1{
+                float: right;
+                color: black;
+                border-color: black;
+                font-family: "Tajawal", sans-serif;
+                font-size: 1.4vw;
+            }
+            p{
+                margin: 0.5vw;
+            }
+            #combut {
+                color: #0E2430;
+                background-color: #8ABFDD;
+                border-color:black;
+                text-decoration-style: double;
+                text-decoration-color: #798897;
+                font-family: "Tajawal", sans-serif;
+                font-size: 1.4vw;
+                padding: 0.4vw 1.2vw;
+                display: flex;
+                margin: 1.2vw;
+            }
+            #comin{
+                border-color:black;
+                font-size: 0.9375vw;
+                font-family: "Tajawal", sans-serif;
+            }
+            #comments{
+                border: 0.15vw;
+                margin-left: 5%;
+                width: 90%;
+                border: 0.15vw;
+                margin-right: 1%;
+                float: left;
+                padding: 0.7vw;
+                overflow: auto;
+                font-family: "Tajawal", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- hearder -->
+        <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding:0.3vw; float: left;">
+                <ul style="text-align-last:right;">
+                    <li style="float: left;"><button class="button button1" onClick="login()" name="signIn">تسجيل الدخول</button></li>
+                    <li class="w3-bar-item w3-border-left"><a class="active" href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="cafe.html">محلات القهوة</a>
+                        <ul>
+                            <li><a href="projectstar.html">starbucks</a></li>
+                            <li><a href="projectdoes.html">dose</a></li>
+                            <li><a href="projectcosta.html">costa</a></li>
+                            <li><a href="barnproject.html">barn's</a></li>
+                            <li><a href="projectdunkkin.html">dunkin</a></li>
+                        </ul>
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html">المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="aboutUs.html">من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:1.5625vw;color:black'></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <!-- slide show -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="photo/slide1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="photo/slide2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="photo/slide3.jpg" style="width:100%">
+            </div>
+        </div> <br>
+        
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        
+        <!-- user comments-->
+        <div id="comments" >
+            <!-- user input -->
+            <div style="border: 0.15vw black; margin: 0.4vw; background-color: #FFFCF6; width:40%; float: left; padding:0.4vw;">
+                <label for="comin" style="margin: 0.390625vw;"> هل تود إضافة تعليق: <i class='fas fa-pencil-alt' style='font-size:1.40625vw'></i></label><br>
+                <input id ="comin" type="text" style="width:30vw; margin: 2%; font-size: 1.40625vw;"><br><br>
+                <input id ="comin1" type="text" placeholder="أسمك" style="width:30vw; margin: 2%; font-size: 1.25vw;"><br>
+                <button id="combut" type="button" onclick="comment()"> إضافة التعليق </button><br> 
+            </div>
+            <!-- comments -->
+            <div style="border: 0.15vw black; margin: 0.4vw; background-color: #FFFCF6; width:55%; float:right; padding:0.4vw; overflow-y: scroll; height: 21vw;">
+                <div class="container1">
+                    <img src="photo/avatar2.png" alt="Avatar" class="right" style="width:100%;">
+                    <span id="comin1" style="color: #798897;">خالد</span><br>
+                    <p>وااااو انه جيد</p>
+                </div>
+                <div class="container1 darker">
+                    <img src="photo/img_avatar.png" alt="Avatar" class="right" style="width:100%;">
+                    <span id="comin1" style="color: #798897;">حازم</span><br>
+                    <p>الموقع رائع وسريع في التوصيل</p>
+                </div>       
+                <div class="container1">
+                    <img src="photo/avatar6.png" alt="Avatar" class="right" style="width:100%;">
+                    <span id="comin1" style="color: #798897;">غالية</span><br>
+                    <p>موقع رشفة حرة سهل علينا الكثير توصيله سريع وخدمة ممتازة جداً، وبما أني محبة جداً للقهوة أصبح اختياري وموقعي المفضل بلا نزاع</p>
+                </div>
+                <div class="container1 darker">
+                    <img src="photo/img_avatar2.png" alt="Avatar" class="right" style="width:100%;">
+                    <p><span id="comout1" style="color: #798897;"></span></p>
+                    <p><span id="comout"></span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- top button -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">للأعلى</button>
+        
+        <!-- footer -->
+        <footer dir="ltr" style="position: fixed;">
+            <ul style="text-align-last:right; float: right;">
+                <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                <li><a><i class='far fa-envelope' style='font-size:1.5625vw;color:black'></i> coffeeD@gmail.com</a></li>
+                <li><a><i class='fas fa-phone-alt' style='font-size:1.5625vw;color:black'></i> +966500112234</a></li>
+            </ul>
+        </footer>
+
+
+        <script>
+            function login(){
+                window.location="signinPage.html";
+            }
+            function comment(){
+                var c = document.getElementById("comin").value;
+                document.getElementById('comout').innerHTML = c;
+                var n = document.getElementById("comin1").value;
+                document.getElementById('comout1').innerHTML = n;
+
+            } 
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active1", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active1";
+                setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+        </script>
+    </body>
+</html>

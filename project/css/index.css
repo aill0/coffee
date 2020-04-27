@@ -1,0 +1,169 @@
+header {
+    background-color: #E7F2F8;
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.4vw;
+    position: sticky;
+    opacity: 0.95;
+}
+body{
+    color: black;
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.17vw;    
+}
+h1{
+    font-family: "Tajawal", sans-serif;
+    font-size: 2.5vw;
+}
+label{
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.25vw;
+    align-self: center;
+}
+input{
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.25vw;
+    align-self:flex-end;
+    margin: 0.78125vw;
+}
+button{
+    font-family: "Tajawal", sans-serif;
+    float:left;
+    background-color: #3486B2;
+    color: snow;
+    padding: 0.15625vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.78125vw;
+    margin: 0.390625vw;
+    cursor: pointer;
+    border: 0.46875vw #003A64;
+}
+.button1{
+    border-radius: 0.46875vw;
+    margin: 0.78125vw 0.703125vw 0vw 1.17vw;
+    float:left;
+    padding: 0.234375vw 0.625vw;
+    
+}
+
+footer {
+    background-color: #E7F2F8;
+    color: #003A64;
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.4vw;
+    position: sticky;
+    left: 0vw;
+    bottom: 0vw;
+   width: 100%;
+   text-align: center;
+    position: fixed;
+}
+footer li {
+  float: right;
+    font-size: 1.25vw;
+    border-left: 0.15625vw #003A64;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 0.78125vw;
+    left: 2.34375vw;
+    z-index: 99;
+    font-size: 0.9375vw;
+    border: none;
+    outline: none;
+    background-color: #54A2D2;
+    color: white;
+    cursor: pointer;
+    padding: 0.78125vw;
+    border-radius: 0.3125vw;
+    font-family: "Tajawal", sans-serif;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #E7F2F8;
+}
+
+
+nav li {
+  float: right;
+    font-size: 1.25vw;
+    border-left: 0.78125vw #003A64;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 1.09375vw 1.5625vw;
+  text-decoration: none;
+    border-left: 0.78125vw #003A64;
+}
+
+li a:hover {
+  background-color: #A1C9D7;
+}
+
+.active {
+    background-color: #AFD8F2;
+}
+nav li li{
+    border-right: none;
+    background-color: #DEE2EC;
+    color: darkslateblue;
+    font-size: 0.9375vw;
+    width:20%;
+    text-align: center;
+}
+nav > ul > li{
+    text-align: center;
+}
+nav> ul> il>a{
+    padding-left: 0px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1.09375vw 1.5625vw;
+    text-decoration: none;
+}
+nav li ul{
+    position:absolute;
+    display: none;
+    width: inherit;
+}
+nav li:hover ul{
+    display: block;
+}
+nav li ul li {
+    display: block;
+}
+li {
+    text-align: center;
+}
+nav w3-bar w3-border{
+    float:right;
+}
+            /* width */
+::-webkit-scrollbar {
+    width: 0.78125vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

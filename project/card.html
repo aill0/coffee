@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>البطاقة</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>  
+            /*تنسيق البطاقة*/
+            body {
+                font-family: Arial;
+                font-size: 1.328125vw;
+                padding: 0.625vw;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .row {
+                display: -ms-flexbox; /* IE10 */
+                display: flex;
+                -ms-flex-wrap: wrap; /* IE10 */
+                flex-wrap: wrap;
+                margin: 0 -1.25vw;
+            }
+            .col-50 {
+                -ms-flex: 50%; /* IE10 */
+                flex: 50%;
+            }
+            .col-75 {
+                -ms-flex: 75%; /* IE10 */
+                flex: 75%;
+            }
+            .col-50,
+            .col-75 {
+                padding: 0 1.25vw;
+            }
+            .container {
+                background-color: #f2f2f2;
+                padding: 0.390625vw 1.5625vw 1.171875vw 1.5625vw;
+                border: 1px solid lightgrey;
+                border-radius: 0.234375vw;
+            }
+            input[type=text] {
+                width: 100%;
+                margin-bottom: 1.5625vw;
+                padding: 0.9375vw;
+                border: 0.078125vw solid #ccc;
+                border-radius: 0.234375vw;
+            }
+            label {
+                margin-bottom: 0.78125vw;
+                display: block;
+            }
+            .icon-container {
+                margin-bottom: 1.5625vw;
+                padding: 0.546875vw 0;
+                font-size: 1.875vw;
+            }
+            a {
+                color: #2196F3;
+            }
+            hr {
+                border: 0.078125vw solid lightgrey;
+            }
+            span.price {
+                float: right;
+                color: grey;
+            }
+            /*دمج صف وعامود*/
+            @media (max-width: 62.5vw) {
+                .row {
+                    flex-direction: column-reverse;
+                }
+        </style>
+    </head>
+    <body>
+        <!-- معلومات البطاقة-->
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="/action_page.php">
+                        
+                        <div class="row">
+                            <div class="col-50">
+                                <h3>المعلومات الشخصية</h3>
+                                <label for="fname"><i class="fa fa-user"></i>الاسم كامل</label>
+                                <input type="text" id="fname" name="firstname" placeholder="محمد عبد الله الزهراني ">
+                                <label for="email"><i class="fa fa-envelope"></i> ايميل</label>
+                                <input type="text" id="email" name="email" placeholder="muhammed@...">
+                                <label for="adr"><i class="fa fa-address-card-o"></i> العنوان</label>
+                                <input type="text" id="adr" name="address" placeholder="مكة -العوالي-شارع ابراهيم الجفالي">
+                                <label for="city"><i class="fa fa-institution"></i> المدينة</label>
+                                <input type="text" id="city" name="city" placeholder="مكة">        
+                            </div>
+                            <div class="col-50">
+                                <h3>الدفع</h3>     
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                </div>
+                                <label for="cname">الاسم الموجود على البطاقة</label>
+                                <input type="text" id="cname" name="cardname" placeholder="محمد عبدالله">
+                                <label for="ccnum">رقم البطاقة</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="14487611165">
+                                <label for="expmonth">تاريخ شهر الانتهاء</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="مايو">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">تاريخ سنة الانهاء</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2022">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="355">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <a href="basket.html"><button> المعلومات صحيحة</button></a>   
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>

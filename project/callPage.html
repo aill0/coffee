@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html len="ar" dir="rtl">
+    <head> 
+        <title>اتصل بنا</title>
+        <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16"> <!-- favicon.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/HTML5-CSS-Reset.css" type="text/css">
+        <link rel="stylesheet" href="css/callPageStyle.css" type="text/css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <style>
+            body {
+                font-family: "Tajawal", sans-serif;
+                height: 45vw;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            /* Style inputs */
+            input[type=text], select, textarea,input[type=email] {
+                width: 50%;
+                padding: 0.9375vw;
+                border: 0.078125vw solid #ccc;
+                margin-top: 0.46875vw;
+                margin-bottom: 1.25vw;
+                resize: vertical;
+            }
+            input[type=submit] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 0.9375vw 1.5625vw;
+                border: none;
+                cursor: pointer;
+            }
+            input[type=submit]:hover {
+                background-color: bisque;
+            }
+            
+            /* Style the container/contact section */
+            .container {
+                border-radius: 0.390625vw;
+                background-color: #FFFFFF;
+                padding: 0.78125vw;
+            }
+            /* Create two columns that float next to eachother */
+            .column {
+                float: left;
+                width: 50%;
+                padding: 0.78125vw;
+                height: 23.4375vw;
+            }
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of  next to each other */
+            @media screen and (max-width: 46.875vw) {
+                .column, input[type=submit] {
+                    width: 50%;
+                    margin-top: 0;
+                }  
+            }
+            button{
+                color: white;
+                padding: 1.5625vw;
+                padding-left: 4.6875vw;
+                padding-right: 4.6875vw;
+                margin:0.78125vw;
+                left:-6%;
+                margin-bottom: 2.34375vw;
+                margin-left: 27%;
+                position:fixed;
+                float:right;
+                background:#6CACCF; 
+            }
+            pre{
+                font-family: "Tajawal", sans-serif;
+            }
+            #snackbar {
+                visibility: hidden;
+                min-width: 19.53125vw;
+                margin-left: -9.765625vw;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 0.15625vw;
+                padding: 1.25vw;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                bottom: 2.34375vw;
+                font-size: 1.328125vw;
+            }
+            #snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+            @-webkit-keyframes fadein {
+                from {bottom: 0; opacity: 0;} 
+                to {bottom: 2.34375vw; opacity: 1;}
+            }  
+            @keyframes fadein {
+                from {bottom: 0; opacity: 0;}
+                to {bottom: 2.34375vw; opacity: 1;}
+            }
+            @-webkit-keyframes fadeout {
+                from {bottom: 2.34375vw; opacity: 1;} 
+                to {bottom: 0; opacity: 0;}
+            }
+            @keyframes fadeout {
+                from {bottom: 2.34375vw; opacity: 1;}
+                to {bottom: 0; opacity: 0;}  
+            }
+        </style>
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <nav>
+                <img src="photo/logo.png" style="width:5.5%; height:5.5%; padding:0.3125vw; float: left;">
+                <ul style="text-align-last:right;">
+                    <li class="w3-bar-item w3-border-left"><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="cafe.html">محلات القهوة</a>
+                        <ul>
+                            <li><a href="projectstar.html">starbucks</a></li>
+                            <li><a href="projectdoes.html">dose</a></li>
+                            <li><a href="projectcosta.html">costa</a></li>
+                            <li><a href="barnproject.html">barn's</a></li>
+                            <li><a href="projectdunkkin.html">dunkin</a></li>
+                        </ul>
+                    </li>
+                    <li class="w3-bar-item w3-border-left"><a href="representative.html">المندوبين</a></li>
+                    <li class="w3-bar-item w3-border-left"><a href="aboutUs.html">من نحن؟</a></li>
+                    <li class="w3-bar-item w3-border-left"><a class="active" href="callPage.html">إتصل بنا</a></li>
+                    <li><a href="basket.html"> سلة المشتريات <i class='fas fa-shopping-cart' style='font-size:1.5625vw;color:black'></i></a>    </li>
+                </ul>
+            </nav>
+        </header>
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <div class="my-container" style="text-align:center; text-align:center; margin-left: 12%; margin-top: 20%;">
+                            <h2>زوّار رشفة حرة</h2>
+                            <pre>لأنكم جزء مننا يهمنا رضاكم، لا تترددو في أي استفسار فقط أكتب عنوانك البريدي الصحيح
+                            وإحنا علينا نرضيك</pre>
+                            <br>
+                            <div class="container">
+                                      <!--زر الارسال -->
+                                <button onclick="myFunction()" class="button;" type="submit">إرسال</button>
+                                <div id="snackbar">تم إرسال رسالتك</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column"style="text-align:center" >
+                        <form action="/action_page.php"  >
+                            <label for="fname">الإسم</label> <br>
+                            <input type="text" id="fname" name="firstname" > <br>
+                            <label for="email">الإيميل</label> <br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="subject">رسالتك</label> <br>
+                            <textarea id="subject" name="subject" placeholder="اكتب شيئا" style="height:170px"></textarea> <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        <!-- footer -->
+        <footer dir="ltr" style="position: fixed">
+            <ul style="text-align-last:right;">
+                    <li><a><i class='fab fa-instagram' style='font-size:1.5625vw;color:black'></i> coffeeD</a></li>
+                    <li><a><i class='fab fa-twitter' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                    <li><a><i class='fab fa-snapchat-ghost' style='font-size:1.5625vw;color:black'></i> @coffeeD</a></li>
+                <li><a><i class='far fa-envelope' style='font-size:1.5625vw;color:black'></i> coffeeD@gmail.com</a></li>
+                <li><a><i class='fas fa-phone-alt' style='font-size:1.5625vw;color:black'></i> +966500112234</a></li>
+            </ul>
+        </footer>
+        <!--ربط الزر-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+        </script>
+    </body>
+</html>
